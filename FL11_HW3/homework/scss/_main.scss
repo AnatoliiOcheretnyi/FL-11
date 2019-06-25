@@ -1,0 +1,217 @@
+$map: (
+        sans: ('Source Sans Pro', sans-serif),
+        hind: ('Hind', sans-serif),
+        fresca: ('Fresca', sans-serif)
+);
+
+body {
+    margin: 0;
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-family: map_get($map, sans);
+  
+    * {
+      box-sizing: border-box;
+    }
+  }
+  
+  p {
+    margin: 0;
+  }
+  .button{
+    background-color: $buttonColor;
+        border: none;
+        color: white;
+        border-radius: 2px;
+        padding: 15px 40px;
+        &:hover{
+            cursor: pointer;
+        }
+  }
+  @mixin logo{
+    display: flex;
+        width: 10%;
+        align-items: center;
+        justify-content: space-around;
+        font-family: map_get($map, hind);
+        font-weight: bold;
+        margin-bottom: 30px; 
+        p {
+            font-size: 25px;
+            text-align: center;
+            line-height: 1;
+            span {
+                display: block;
+                font-size: 10px;
+              }
+            }
+  }
+  .header {
+    background: $backgroundPicture;
+    background-size: cover;
+    min-height: 100vh;
+    border-radius: 0 0 50% 0;
+    .landing-logo {
+        @include logo;
+        }
+  
+    .header-wrap {
+      padding-top: 20px;  
+      margin: 0 10%;
+      width: 90%;
+  
+      .header_heading {
+        color: $textColor;
+        font-size: 75px;
+        width: 50%;
+        font-weight: bold;
+        font-family: map-get($map: $map, $key: sans);
+        position: relative;
+        z-index: 1;
+        &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $lineColor;
+          width: 4.2em;
+          bottom: 0;
+          z-index: -1;
+          height: 32px;
+        }
+      }
+  
+      .header_text {
+        font-family: map_get($map, hind);
+        width: 40%;
+        margin: 40px 0;
+      }
+  
+      .header_button {
+        @extend .button;
+      }
+    }
+  }
+  .section {
+    text-align: center;
+    position: relative;
+  
+    p.section_text {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      font-size: 45px;
+      font-weight: bold;
+      font-family: map_get($map, sans);
+      color: $textColor;
+      margin: 20px 0;
+  
+      &:before {
+        content: "";
+          display: block;
+          position: absolute;
+          background-color: $lineColor;
+          width: 4.2em;
+          bottom: 0;
+          z-index: -1;
+          height: 16px;
+        left: 52.5%;
+        width: 45%;
+        bottom: 10%;
+      }
+    }
+    .section_card_wrap{
+      display: flex;
+      justify-content: space-between;
+      margin-left: 10%;
+      width: 80%;
+      margin-bottom: 200px;
+      .section_card_img {
+        border-radius: 3px;
+        width: 100%;
+      }
+      .section_card{
+        color: white;
+        width: 30%;
+        border-radius: 3px;
+        background-color: $footerColor;
+        padding: 15px;
+        .section_card_heading{
+          margin: 10px 0;
+          font-size: 25px;
+          font-family: map-get($map: $map, $key: hind);
+          font-weight: bold;
+          position: relative;
+          z-index: 1;
+          span {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $lineColor;
+            width: inherit;
+            right: 20%;
+            z-index: -1;
+            height: 10px;
+            bottom: 20%;
+            width: 60%;
+          }
+        }
+
+        .section_card_text{
+          opacity: 0.5;
+        }
+      }
+    }
+    .section_banner{
+      background: $gradient;
+      width: 60%;
+      margin: 0 auto;
+      color: white;
+      display: flex;
+      border-radius: 3px;
+      padding: 30px;
+      justify-content: space-between;
+      position: absolute;
+      z-index: 2;
+      bottom: -53%;
+      left: 19%;
+      .section_banner_heading{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .section_banner_text{
+        margin-bottom: 20px;
+        font-family: map_get($map: $map, $key: sans);
+        margin-left: -65px;
+      }
+      .section_banner_button {
+        @extend .button;
+        align-self: center;
+      }
+    }
+  }
+ 
+  .footer {
+    height: 300px;
+    background-color: $footerColor;
+    color: white;
+    padding: 11em 0 5em 0;
+  
+    .footer-wrap {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+  
+      .footer_logo{
+        @include logo;
+      }
+      .footer_text{
+        width: 30%;
+      }
+  
+      .footer-cr {
+        opacity: 0.5;
+      }
+    }
+  }
