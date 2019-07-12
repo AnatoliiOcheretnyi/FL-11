@@ -9,4 +9,4 @@ function pipe(number, ...pipeFunc){
     return number
 }
 
-console.log(pipe(1, addOne, addOne));
+pipe(1, addOne, addOne);
