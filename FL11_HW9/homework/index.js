@@ -49,3 +49,9 @@ function filterArray(arr, func){
     });
     return mass;
 }
+
+function showFormattedDate(date) {
+    let options = { month: 'short', day: '2-digit'};
+    const formatDate = date.toLocaleDateString('en-us', options);
+    return '\'' + 'Date: ' + formatDate + ' ' + date.getFullYear() + '\'';
+  }
