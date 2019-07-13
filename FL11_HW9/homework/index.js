@@ -55,3 +55,10 @@ function showFormattedDate(date) {
     const formatDate = date.toLocaleDateString('en-us', options);
     return '\'' + 'Date: ' + formatDate + ' ' + date.getFullYear() + '\'';
   }
+
+function canConvertToDate(string){
+    let possibleDate = new Date(string);
+    return !isNaN(possibleDate);
+  }
+  
+  console.log(canConvertToDate('2016-13-18T00:00:00'));
