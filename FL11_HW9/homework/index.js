@@ -11,3 +11,41 @@ function getNumbers(string){
     }
     return numberMass;
 }
+
+function findTypes(){
+    let mass = {};
+    let element;
+    for(let i = 0; i < arguments.length; i++){
+        element = typeof arguments[i]
+        if(mass.hasOwnProperty(element)){
+            mass[element] += 1
+        }else{
+            mass[element] = 1
+        }
+    }
+    return mass
+}
+
+function executeforEach(arr, func){
+    for(let i = 0; i < arr.length; i++){
+        func(arr[i])
+    }
+}
+
+function mapArray(arr, func){
+    let mass = [];
+    executeforEach(arr, function (transform) {
+        mass.push(func(transform));
+    });
+    return mass;
+}
+
+function filterArray(arr, func){
+    let mass = [];
+    executeforEach(arr, function (filter) {
+        if(func(filter)) {
+            mass.push(filter)
+        }
+    });
+    return mass;
+}
