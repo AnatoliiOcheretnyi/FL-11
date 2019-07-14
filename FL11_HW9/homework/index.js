@@ -110,4 +110,24 @@ function showFormattedDate(date) {
       return filterArray(data, function (person) { 
         daysBetween(new Date(person.birthday), new Date()) > adultAge
     }).length;
+  } 
+
+  function keys(object){
+      let keysArr = [];
+      for(let i in object){
+        if(object.hasOwnProperty(i)){
+            keysArr.push(i)
+        }
+      }
+      return keysArr;
   }
+
+  function values(object){
+    let valuesArr = [];
+    for(let i in object){
+      if(object.hasOwnProperty(i)){
+          valuesArr.push(object[i])
+      }
+    }
+    return valuesArr;
+}  
