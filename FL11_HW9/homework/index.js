@@ -60,3 +60,12 @@ function canConvertToDate(string){
     let possibleDate = new Date(string);
     return !isNaN(possibleDate);
   }
+
+function daysBetween(firstDate, secondDate){
+    let seconds = 1000;
+    let minutes = 3600;
+    let hours = 24;
+    let diference;
+    diference = Math.ceil(Math.abs(secondDate.getTime() - firstDate.getTime()) / (seconds * minutes * hours));
+    return diference
+  }  
