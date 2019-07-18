@@ -40,10 +40,7 @@ class Fighter{
     }
 
     heal(boost){
-        defender.hp += boost;
-        if(defender.hp > 110){  // shit
-            defender.hp = 110
-        }
+       
     }
 
     dealDamage(){
