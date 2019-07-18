@@ -1,4 +1,4 @@
-'use strict';
+const gameResults = {loss: 0, wins: 0};
 
 class Fighter{
     constructor(data){
@@ -23,10 +23,33 @@ class Fighter{
     get getAgility(){
         return this.agility
     }
+
+    atack(defender){
+        let maxPosibilityOfAtack = 100;
+        let posibilityOfAtack = maxPosibilityOfAtack - defender.getAgility;
+        let chanceOfAtack = Math.floor(Math.random() * maxPosibilityOfAtack)
+        if(posibilityOfAtack > chanceOfAtack){
+            console.log('${this.name} make ${this.damage} damage to ${defender.name}');
+        } else{
+            console.log('${this.name} attack missed');
+        }
+    }
+
+    logCombatHistory(){
+        return console.log('Name: ${this.name}, Wins: ${addWin}, Losses: ${addLose}');
+    }
+
+    heal(boost){
+        defender.hp += boost;
+        if(defender.hp > 110){  // shit
+            defender.hp = 110
+        }
+    }
+
+    dealDamage(){
+        
+    }
 }
 
-const myFighter = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
-console.log(myFighter.getName)
-console.log(myFighter.getAgility)
-console.log(myFighter.getHealth)
-console.log(myFighter.getDamage)
+const fighter1 = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
+const fighter2 = new Fighter({name: 'Jim', damage: 25, hp: 90, agility: 20});
