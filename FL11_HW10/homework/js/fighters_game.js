@@ -29,14 +29,14 @@ class Fighter{
         let posibilityOfAtack = maxPosibilityOfAtack - defender.getAgility;
         let chanceOfAtack = Math.floor(Math.random() * maxPosibilityOfAtack)
         if(posibilityOfAtack > chanceOfAtack){
-            console.log('${this.name} make ${this.damage} damage to ${defender.name}');
+            console.log(`${this.name} make ${this.damage} damage to ${defender.name}`);
         } else{
-            console.log('${this.name} attack missed');
+            console.log(`${this.name} attack missed`);
         }
     }
 
     logCombatHistory(){
-        return console.log('Name: ${this.name}, Wins: ${addWin}, Losses: ${addLose}');
+        return console.log(`Name: ${this.name}, Wins: ${addWin}, Losses: ${addLose}`);
     }
 
     heal(heal) {
