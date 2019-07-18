@@ -1,5 +1,3 @@
-const gameResults = {wins: 0, loss: 0};
-
 class Fighter{
     constructor(data){
         this.name = data.name;
@@ -7,6 +5,8 @@ class Fighter{
         this.hp = data.hp;
         this.maxHP = data.hp
         this.agility = data.agility;
+        this.win = 0;
+        this.loss = 0;
     }
     get getName(){
         return this.name
@@ -36,7 +36,7 @@ class Fighter{
         if(this.hp > this.maxHP){
             this.hp = this.maxHP
         }
-        return console.log(`${this.name} has HP: ${this.hp}`);
+        return console.log(`${this.name} health is: ${this.hp}`);
     }
     dealDamage(damage){
         this.hp -= damage
@@ -45,13 +45,13 @@ class Fighter{
         } 
     }
     addWin(){
-        return gameResults.wins++;
+        this.win++;
     }
     addLose(){
-        return gameResults.loss++;
+        this.loss++;
     }
     logCombatHistory(){
-        return console.log(`Name: ${this.name} Wins: ${this.addWin()}, Losses: ${this.addLose()}`);
+        return console.log(`Name: ${this.name} Wins: ${this.win}, Losses: ${this.loss}`);
     }
 }
 
@@ -66,12 +66,12 @@ function battle(attackFighter, defenderFighter){
         if(attackFighter.getHealth === 0){
             defenderFighter.addWin();
             attackFighter.addLose();
-            console.log(`${defenderFighter.getName} win!`);
+            console.log(`${defenderFighter.getName} is dead and can't fight`);
         }
         if(defenderFighter.getHealth === 0){
             attackFighter.addWin();
             defenderFighter.addLose();
-            console.log(`${attackFighter.getName} win!`);
+            console.log(`${attackFighter.getName} is dead and can't fight`);
         }
     }
 }
