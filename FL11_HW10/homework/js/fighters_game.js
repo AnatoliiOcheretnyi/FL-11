@@ -39,8 +39,12 @@ class Fighter{
         return console.log('Name: ${this.name}, Wins: ${addWin}, Losses: ${addLose}');
     }
 
-    heal(boost){
-       
+    heal(heal) {
+        this.hp += heal;
+        if(this.hp > 110){
+            this.hp = 110
+        }
+        return console.log(`${this.name} has HP: ${this.hp}`);
     }
 
     dealDamage(){
@@ -50,3 +54,4 @@ class Fighter{
 
 const fighter1 = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
 const fighter2 = new Fighter({name: 'Jim', damage: 25, hp: 90, agility: 20});
+console.log(fighter1.heal(50));
