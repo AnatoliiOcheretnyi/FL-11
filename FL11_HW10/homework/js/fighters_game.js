@@ -5,6 +5,7 @@ class Fighter{
         this.name = data.name;
         this.damage = data.damage;
         this.hp = data.hp;
+        this.maxHP = data.hp
         this.agility = data.agility;
     }
 
@@ -41,8 +42,8 @@ class Fighter{
 
     heal(heal) {
         this.hp += heal;
-        if(this.hp > 110){
-            this.hp = 110
+        if(this.hp > this.maxHP){
+            this.hp = this.maxHP
         }
         return console.log(`${this.name} has HP: ${this.hp}`);
     }
@@ -55,3 +56,4 @@ class Fighter{
 const fighter1 = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
 const fighter2 = new Fighter({name: 'Jim', damage: 25, hp: 90, agility: 20});
 console.log(fighter1.heal(50));
+console.log(fighter1.getHealth);
