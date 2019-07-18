@@ -78,7 +78,3 @@ function battle(attackFighter, defenderFighter){
 
 const fighter1 = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
 const fighter2 = new Fighter({name: 'Jim', damage: 25, hp: 90, agility: 20});
-
-battle(mario, luigi)
-mario.logCombatHistory()
-luigi.logCombatHistory()
