@@ -66,15 +66,12 @@ function battle(attackFighter, defenderFighter){
         if(attackFighter.getHealth === 0){
             defenderFighter.addWin();
             attackFighter.addLose();
-            console.log(`${defenderFighter.getName} is dead and can't fight`);
+            console.log(`${attackFighter.getName} is dead and can't fight`);
         }
         if(defenderFighter.getHealth === 0){
             attackFighter.addWin();
             defenderFighter.addLose();
-            console.log(`${attackFighter.getName} is dead and can't fight`);
+            console.log(`${defenderFighter.getName} is dead and can't fight`);
         }
     }
 }
-
-const fighter1 = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
-const fighter2 = new Fighter({name: 'Jim', damage: 25, hp: 90, agility: 20});
