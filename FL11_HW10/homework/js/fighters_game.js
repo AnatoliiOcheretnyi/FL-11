@@ -26,9 +26,9 @@ class Fighter{
         let chanceOfAtack = Math.floor(Math.random() * maxPosibilityOfAtack)
         if(posibilityOfAtack > chanceOfAtack){
             defender.dealDamage(this.getDamage);
-            console.log(`${this.name} make ${this.damage} damage to ${defender.name}`);
+            console.log(`${this.getName} make ${this.getDamage} damage to ${defender.getName}`);
         } else{
-            console.log(`${this.name} attack missed`);
+            console.log(`${this.getName} attack missed`);
         }
     }
     heal(heal) {
@@ -36,7 +36,7 @@ class Fighter{
         if(this.hp > this.maxHP){
             this.hp = this.maxHP
         }
-        return console.log(`${this.name} health is: ${this.hp}`);
+        return console.log(`${this.getName} health is: ${this.getHealth}`);
     }
     dealDamage(damage){
         this.hp -= damage
@@ -47,14 +47,14 @@ class Fighter{
     addWin(){
         this.win++;
     }
+    
     addLose(){
         this.loss++;
     }
     logCombatHistory(){
-        return console.log(`Name: ${this.name} Wins: ${this.win}, Losses: ${this.loss}`);
+        return console.log(`Name: ${this.getName} Wins: ${this.win}, Losses: ${this.loss}`);
     }
 }
-
 function battle(attackFighter, defenderFighter){
     while(attackFighter.getHealth > 0 && defenderFighter.getHealth > 0){
         if(attackFighter.getHealth > 0){
