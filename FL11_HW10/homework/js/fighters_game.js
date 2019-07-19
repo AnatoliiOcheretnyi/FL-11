@@ -1,24 +1,40 @@
+const private_data = new WeakMap();
 class Fighter{
-    constructor(data){
-        this.name = data.name;
-        this.damage = data.damage;
-        this.hp = data.hp;
-        this.maxHP = data.hp
-        this.agility = data.agility;
+    constructor({name, damage, hp, agility}){
+        const _private = new Map()
+        .set('name', name)
+        .set('damage', damage)
+        .set('hp', hp)
+        .set('maxHP', hp)
+        .set('agility', agility);
+        private_data.set(this, _private);
         this.win = 0;
         this.loss = 0;
     }
     get getName(){
-        return this.name
+        const _private = private_data.get(this);
+        let name = _private.get('name');
+        return name
     }
     get getDamage(){
-        return this.damage
+        const _private = private_data.get(this);
+        let damage = _private.get('damage');
+        return damage
     }
     get getHealth(){
-        return this.hp
+        const _private = private_data.get(this);
+        let hp = _private.get('hp');
+        return hp
+    }
+    get getMaxHp(){
+        const _private = private_data.get(this);
+        let maxHP = _private.get('maxHP');
+        return maxHP
     }
     get getAgility(){
-        return this.agility
+        const _private = private_data.get(this);
+        let agility = _private.get('agility');
+        return agility
     }
     atack(defender){
         let maxPosibilityOfAtack = 100;
@@ -30,24 +46,32 @@ class Fighter{
         } else{
             console.log(`${this.getName} attack missed`);
         }
-    }
+    } 
     heal(heal) {
-        this.hp += heal;
-        if(this.hp > this.maxHP){
-            this.hp = this.maxHP
+        const _private = private_data.get(this);
+        let hp = _private.get('hp');
+        let maxHP = _private.get('maxHP');
+        hp += heal;
+        _private.set('hp', hp);
+        if(hp > maxHP){
+            hp = maxHP
+            _private.set('hp', hp);
         }
         return console.log(`${this.getName} health is: ${this.getHealth}`);
     }
     dealDamage(damage){
-        this.hp -= damage
-        if(this.hp < 0){
-            this.hp = 0
+        const _private = private_data.get(this);
+        let hp = _private.get('hp');
+        hp -= damage
+        _private.set('hp', hp);
+        if(hp < 0){
+            hp = 0
+            _private.set('hp', hp);
         } 
     }
     addWin(){
         this.win++;
     }
-    
     addLose(){
         this.loss++;
     }
@@ -61,7 +85,7 @@ function battle(attackFighter, defenderFighter){
             attackFighter.atack(defenderFighter)
         }
         if(defenderFighter.getHealth > 0){
-            defenderFighter.atack(attackFighter)
+            defenderFighter.atack(attackFighter)            
         }
         if(attackFighter.getHealth === 0){
             defenderFighter.addWin();
