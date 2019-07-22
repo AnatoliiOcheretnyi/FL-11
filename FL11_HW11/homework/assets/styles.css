@@ -1,2 +1,121 @@
-/* Your styles goes here */
+form{
+    text-align: center;
+}
 
+.header{
+    text-align: center;
+    color: #34B0FE;
+    margin: 1.5rem 0;
+}
+
+.upper-case{text-transform: uppercase;}
+
+.add-task input[type=text]{
+    width: 80%;
+    border: 1px solid rgb(100, 194, 253);
+    border-radius: 3px;
+}
+
+input[placeholder] {
+    padding: 1.2rem;
+    font-size: 12px;
+}
+
+hr{
+    width: 87%;
+    border: 4px solid #E3F2FF;
+    border-radius: 10px;
+    margin: 2rem 0 0 6.3rem;
+}
+
+.add{
+    position: relative;
+    top: 22px;
+    font-size: 55px;
+    color: rgb(207, 204, 204);
+    cursor: pointer;
+}
+
+.wrap-list{
+    margin-top: 1.5rem;
+}
+
+.tasks-list{
+    margin: 1rem 0 0 6.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-tasks{
+    margin: 0.5rem 0 0 6.3rem;
+    display: flex;
+}
+
+.task-list_item{
+    display: flex;
+}
+
+input[type="checkbox"] {
+    display: none;
+    zoom: 1.4;
+
+}
+label {
+    font-size: 1em;
+    color: #34B0FE; 
+    cursor: pointer;
+}
+label::before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 1px solid #C8D0D8;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: "+";
+    text-align: center;
+    color:#34B0FE;
+    font-weight: bolder;
+}
+
+.edit{
+    color: #34B0FE;
+    margin-left: 0.3rem;
+    position: relative;
+    top: -11px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.delete{
+    color: #34B0FE;
+    position: relative;
+    top: -6px;
+    right: 101px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.save{
+    color: #34B0FE;
+    position: relative;
+    top: 3px;
+    left: 23px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.task-list_item-check input[type=text]{
+    width: 100%;
+    border: 1px solid rgb(100, 194, 253);
+    border-radius: 3px;
+}
+
+.task-list_item-check input[placeholder] {
+    padding: .5rem;
+    font-size: 12px;
+}
