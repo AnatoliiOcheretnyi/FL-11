@@ -7,8 +7,47 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <h1 class="header"><span class="upper-case">Todo</span> Cat List</h1>
+    <form action="">
+      <fieldlist class="add-task">
+        <input type="text" placeholder="Add new action">
+        <i class="material-icons add">add_box</i>
+      </fieldlist>
+    </form>
+    <hr>
+    <div class="wrap-list">
+        <div id="task-list" class="tasks-list">
+            <div class="task-list_item">
+              <div class="task-list_item-check">
+                  <input type="checkbox" class="checkbox" id="1">
+                  <label for="1">let's kill cat</label>
+              </div>
+              <i class="material-icons edit">edit</i>
+            </div>
+            <i class="material-icons delete">delete</i>
+          </div>
 
+          <div id="task-list" class="edit-tasks">
+              <div class="task-list_item">
+                <div class="task-list_item-check">
+                    <input type="text" placeholder="let's kill cat">
+                </div>
+                <i class="material-icons save">save</i>
+              </div>
+            </div>
+            <div id="task-list" class="tasks-list">
+                <div class="task-list_item">
+                  <div class="task-list_item-check">
+                      <input type="checkbox" class="checkbox" id="2">
+                      <label for="2">let's kill cat</label>
+                  </div>
+                  <i class="material-icons edit">edit</i>
+                </div>
+                <i class="material-icons delete">delete</i>
+              </div>
+    </div>
+    </div>
   <script src="./src/app.js"></script>
 </body>
 </html>
