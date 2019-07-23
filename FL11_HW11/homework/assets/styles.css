@@ -36,100 +36,45 @@ hr{
     cursor: pointer;
 }
 
-.add {
-    width: 35px;
-    height: 35px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 50px;
-    background-color: #fff;
-    color: #ccc;
-}
-
-.wrap-list{
-    margin-top: 1.5rem;
-}
-
-.tasks-list{
-    margin: 1rem 0 0 6.3rem;
+.deal.edit {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    cursor: pointer;
 }
 
-.edit-tasks{
-    margin: 0.5rem 0 0 6.3rem;
+.task-list {
     display: flex;
+    width: 80%;
+    margin-left: 4rem;
 }
 
-.task-list_item{
-    display: flex;
+#toDoList {
+    width: 90%;
 }
 
-input[type="checkbox"] {
+.list-item {
+    list-style: none;
+}
+
+.hidden {
     display: none;
-    zoom: 1.4;
-
-}
-label {
-    font-size: 1em;
-    color: #34B0FE; 
-    cursor: pointer;
-}
-label::before {
-    content: '';
-    display: inline-block;
-    vertical-align: top;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    border: 1px solid #C8D0D8;
 }
 
-input[type="checkbox"]:checked + label::before {
-    content: "+";
-    text-align: center;
-    color:#34B0FE;
-    font-weight: bolder;
-}
-
-.edit{
+.task {
+    display: flex;
+    align-items: center;
     color: #34B0FE;
-    margin-left: 0.3rem;
-    position: relative;
-    top: -11px;
-    font-size: 30px;
-    cursor: pointer;
 }
 
 .delete{
     color: #34B0FE;
     position: relative;
-    top: -6px;
-    right: 101px;
-    font-size: 30px;
+    left: 225px;
     cursor: pointer;
 }
 
 .save{
     color: #34B0FE;
-    position: relative;
-    top: 3px;
-    left: 23px;
-    font-size: 30px;
     cursor: pointer;
-}
-
-.task-list_item-check input[type=text]{
-    width: 100%;
-    border: 1px solid rgb(100, 194, 253);
-    border-radius: 3px;
-}
-
-.task-list_item-check input[placeholder] {
-    padding: .5rem;
-    font-size: 12px;
-}
-
-.hide{
-    display: none;
 }
