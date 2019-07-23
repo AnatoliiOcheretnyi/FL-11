@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework 11 - TODO Cat List</title>
-  <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
-  <link rel="stylesheet" href="./assets/styles.css">
-</head>
-<body>
-  <div id="root">
-    <h1 class="header"><span class="upper-case">Todo</span> Cat List</h1>
-    <form action="">
-      <fieldlist class="add-task">
-        <input type="text" id="get-text" placeholder="Add new action">
-       <!-- <i id="add-button" class="material-icons add">add_box</i> -->
-        <button id="add-button" type="button" class="material-icons add">add_box</button>
-      </fieldlist>
-    </form>
-    <hr>
-    <div id="task-list" class="wrap-list">
-        <slot  class="tasks-list">
-            <div id="edited"  class="edit-tasks hide">
-                <div class="task-list_item">
-                  <div class="task-list_item-check">
-                      <input type="text" placeholder="let's kill cat">
-                  </div>
-                  <i class="material-icons save">save</i>
-                </div>
-              </div>
-            <div class="task-list_item">
-              <div class="task-list_item-check">
-                  <input type="checkbox" class="checkbox" id="1">
-                  <label for="1">let's kill cat</label>
-              </div>
-              <i class="material-icons edit">edit</i>
-            </div>
-            <i class="material-icons delete">delete</i>
-        </slot> 
 
-          <div  class="edit-tasks">
-              <div class="task-list_item">
-                <div class="task-list_item-check">
-                    <input type="text" placeholder="let's kill cat">
-                </div>
-                <i class="material-icons save">save</i>
-              </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 11 - TODO Cat List</title>
+    <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="header"><span class="upper-case">Todo</span> Cat List</h1>
+        <form>
+              <input type="text" id="get-text" placeholder="Add new action">
+             <i id="add-button" class="material-icons add">add_box</i>
+          </form>
+          <hr>
+        <div class="task-list">
+            <ul id='toDoList'>
+            </ul>
+        </div>
     </div>
-    </div>
-  <script src="./src/app.js"></script>
+    <script src="./src/app.js"></script>
 </body>
 </html>
