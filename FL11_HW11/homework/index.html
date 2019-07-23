@@ -11,13 +11,22 @@
     <h1 class="header"><span class="upper-case">Todo</span> Cat List</h1>
     <form action="">
       <fieldlist class="add-task">
-        <input type="text" placeholder="Add new action">
-        <i class="material-icons add">add_box</i>
+        <input type="text" id="get-text" placeholder="Add new action">
+       <!-- <i id="add-button" class="material-icons add">add_box</i> -->
+        <button id="add-button" type="button" class="material-icons add">add_box</button>
       </fieldlist>
     </form>
     <hr>
-    <div class="wrap-list">
-        <div id="task-list" class="tasks-list">
+    <div id="task-list" class="wrap-list">
+        <slot  class="tasks-list">
+            <div id="edited"  class="edit-tasks hide">
+                <div class="task-list_item">
+                  <div class="task-list_item-check">
+                      <input type="text" placeholder="let's kill cat">
+                  </div>
+                  <i class="material-icons save">save</i>
+                </div>
+              </div>
             <div class="task-list_item">
               <div class="task-list_item-check">
                   <input type="checkbox" class="checkbox" id="1">
@@ -26,9 +35,9 @@
               <i class="material-icons edit">edit</i>
             </div>
             <i class="material-icons delete">delete</i>
-          </div>
+        </slot> 
 
-          <div id="task-list" class="edit-tasks">
+          <div  class="edit-tasks">
               <div class="task-list_item">
                 <div class="task-list_item-check">
                     <input type="text" placeholder="let's kill cat">
@@ -36,16 +45,6 @@
                 <i class="material-icons save">save</i>
               </div>
             </div>
-            <div id="task-list" class="tasks-list">
-                <div class="task-list_item">
-                  <div class="task-list_item-check">
-                      <input type="checkbox" class="checkbox" id="2">
-                      <label for="2">let's kill cat</label>
-                  </div>
-                  <i class="material-icons edit">edit</i>
-                </div>
-                <i class="material-icons delete">delete</i>
-              </div>
     </div>
     </div>
   <script src="./src/app.js"></script>
