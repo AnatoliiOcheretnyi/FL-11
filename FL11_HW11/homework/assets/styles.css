@@ -36,6 +36,16 @@ hr{
     cursor: pointer;
 }
 
+.add {
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 50px;
+    background-color: #fff;
+    color: #ccc;
+}
+
 .wrap-list{
     margin-top: 1.5rem;
 }
@@ -118,4 +128,8 @@ input[type="checkbox"]:checked + label::before {
 .task-list_item-check input[placeholder] {
     padding: .5rem;
     font-size: 12px;
+}
+
+.hide{
+    display: none;
 }
