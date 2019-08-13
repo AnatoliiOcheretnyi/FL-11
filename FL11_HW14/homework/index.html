@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>FLX - EPAM Front-end LAB</title>
+
+  <!-- Critical css -->
+  <style>
+    html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}html{-webkit-font-smoothing:antialiased}body{margin:0}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}body{background:#fff;font-family:'Lora',serif;font-style:normal;font-weight:300;overflow-x:hidden}body{padding-top:87px}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.modal-header:after,.modal-header:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:table;content:" "}.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.modal-header:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after{clear:both}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media(min-width:768px){.navbar{border-radius:4px}}.navbar-static-top{z-index:1000;border-width:0 0 1px}@media(min-width:768px){.navbar-static-top{border-radius:0}}.navbar-fixed-bottom,.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media(min-width:768px){.navbar-fixed-bottom,.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default{background:#fff;margin:0!important;padding:18px 0}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media(min-width:768px){.container{width:750px}}@media(min-width:992px){.container{width:970px}}@media(min-width:768px){.navbar-header{float:left}}.container>.navbar-header{margin-right:0;margin-left:0}@media(min-width:768px){.navbar-toggle{display:none}}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle{border:0;padding-top:10px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-brand{color:#555;font-family:'Merriweather',serif;font-weight:bold;text-transform:uppercase;letter-spacing:4px;margin:0}@media(min-width:768px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#e7e7e7}@media(min-width:768px){.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}@media(min-width:768px){.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media(min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}}@media(min-width:768px){.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.navbar-nav{margin:7.5px -15px}@media(min-width:768px){.navbar-nav{float:left;margin:0}}@media(min-width:768px){.navbar-right{float:right!important;margin-right:-15px}}.nav>li{position:relative;display:block}@media(min-width:768px){.navbar-nav>li{float:left}}a{color:#4d638c;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;text-decoration:none!important}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media(min-width:768px){.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-nav li a{color:#777;font-size:16px;letter-spacing:1px;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;padding-right:22px;padding-left:22px}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav li a:hover,.navbar-default .navbar-nav .active>a{color:#bfba55}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus{color:#bfba55;background-color:transparent}.preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1020;display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;background:none repeat scroll 0 0 #fff}.sk-spinner-wordpress.sk-spinner{background-color:#bfba55;width:40px;height:40px;border-radius:40px;position:relative;-webkit-animation:sk-innerCircle 1s linear infinite;animation:sk-innerCircle 1s linear infinite}.sk-spinner-wordpress .sk-inner-circle{display:block;background-color:#fff;width:16px;height:16px;position:absolute;border-radius:8px;top:5px;left:5px}@-webkit-keyframes sk-innerCircle{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes sk-innerCircle{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+  </style>
+
+  <!-- loadCSS js plugin -->
+  <script src="js/loadCSS.js"></script>
+
+  <!-- Other css (async) -->
+  <script>
+    loadCSS('styles/styles.min.css');
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
+  <!-- Vendor css -->
+  <!-- <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/font-awesome.min.css"> -->
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="styles/styles.min.css">
+
+  <!-- Vendor Scripts -->
+  <script src="js/jquery.js" defer></script>
+  <script src="js/bootstrap.min.js" defer></script>
+  <script src="js/jquery.parallax.js" defer></script>
+  <script src="js/smoothscroll.js" defer></script>
+  <script src="js/lazyload.min.js" defer></script>
+  <!-- Custom Scripts -->
+  <script src="js/custom.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Pre loader -->
+
+  <div class="preloader">
+      <div class="sk-spinner sk-spinner-wordpress">
+          <span class="sk-inner-circle"></span>
+      </div>
+  </div>
+
+  <!-- Navigation section  -->
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">FLX</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Home Section -->
+
+  <section id="home" class="main-home parallax-section">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+          <h1>Hello! This is FLX.</h1>
+          <h4>This is EPAM Front-end LAB</h4>
+          <a href="#blog" class="smoothScroll btn btn-default">Discover More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-offset-1 col-md-10 col-sm-12">
+          <div class="blog-post-thumb">
+            <div class="blog-post-image">
+              <a href="#">
+                <img class="img-responsive lazy" data-src="img/blog-image1.jpg" data-srcset="img/blog-image1-min.jpg 480w,img/blog-image1.jpg" data-sizes="100vw" alt="Blog Image">
+              </a>
+            </div>
+            <div class="blog-post-title">
+              <h3><a href="#">We Help You To Make Front-end Great Again</a></h3>
+            </div>
+            <div class="blog-post-format">
+              <span><a href="#"><img src="img/author-image1.jpg" srcset="img/author-image1-min.jpg 480w,img/author-image1.jpg" sizes="100vw" class="img-responsive img-circle">
+                  Jen Lopez</a></span>
+              <span><i class="fa fa-date"></i> July 22, 2017</span>
+              <span><a href="#"><i class="fa fa-comment-o"></i> 35 Comments</a></span>
+            </div>
+            <div class="blog-post-des">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+              <a href="#" class="btn btn-default">Continue Reading</a>
+            </div>
+          </div>
+
+          <div class="blog-post-thumb">
+            <div class="blog-post-image">
+              <a href="#">
+                <img class="img-responsive lazy" data-src="img/blog-image2.jpg" data-srcset="img/blog-image2-min.jpg 480w,img/blog-image2.jpg" data-sizes="100vw" alt="Blog Image">
+              </a>
+              </a>
+            </div>
+            <div class="blog-post-title">
+              <h3><a href="#">In pretium tellus et ante accumsan</a></h3>
+            </div>
+            <div class="blog-post-format">
+              <span><a href="#"><img src="img/author-image2.jpg" srcset="img/author-image2-min.jpg 480w,img/author-image2.jpg" sizes="100vw" class="img-responsive img-circle">
+                  Leo Dennis</a></span>
+              <span><i class="fa fa-date"></i> June 10, 2017</span>
+              <span><a href="#"><i class="fa fa-comment-o"></i> 48 Comments</a></span>
+            </div>
+            <div class="blog-post-des">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+              <a href="#" class="btn btn-default">Continue Reading</a>
+            </div>
+          </div>
+
+          <div class="blog-post-thumb">
+            <div class="blog-post-image">
+              <a href="#">
+                <img class="img-responsive lazy" data-src="img/blog-image3.jpg" data-srcset="img/blog-image3-min.jpg 480w,img/blog-image3.jpg" data-sizes="100vw" alt="Blog Image">
+              </a>
+            </div>
+            <div class="blog-post-title">
+              <h3><a href="#">Nam interdum maximus dolor faucibus</a></h3>
+            </div>
+            <div class="blog-post-format">
+              <span><a href="#"><img src="img/author-image1.jpg" srcset="img/author-image1-min.jpg 480w,img/author-image1.jpg" sizes="100vw" class="img-responsive img-circle">
+                  Jen Lopez</a></span>
+              <span><i class="fa fa-date"></i> May 30, 2017</span>
+              <span><a href="#"><i class="fa fa-comment-o"></i> 63 Comments</a></span>
+            </div>
+            <div class="blog-post-des">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+              <a href="#" class="btn btn-default">Continue Reading</a>
+            </div>
+          </div>
+
+          <div class="blog-post-thumb">
+            <div class="blog-post-image">
+              <a href="#">
+                <img class="img-responsive lazy" data-src="img/blog-image4.jpg" data-srcset="img/blog-image4-min.jpg 480w,img/blog-image4.jpg" data-sizes="100vw" alt="Blog Image">
+              </a>
+            </div>
+            <div class="blog-post-title">
+              <h3><a href="#">The ingredients that make a great burger</a></h3>
+            </div>
+            <div class="blog-post-format">
+              <span><a href="#"><img src="img/author-image2.jpg" srcset="img/author-image2-min.jpg 480w,img/author-image2.jpg" sizes="100vw" class="img-responsive img-circle">
+                  Leo Dennis</a></span>
+              <span><i class="fa fa-date"></i> April 18, 2017</span>
+              <span><a href="#"><i class="fa fa-comment-o"></i> 124 Comments</a></span>
+            </div>
+            <div class="blog-post-des">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+              <a href="#" class="btn btn-default">Continue Reading</a>
+            </div>
+          </div>
+
+          <div class="blog-post-thumb">
+            <div class="blog-post-image">
+              <a href="#">
+                <img class="img-responsive lazy" data-src="img/blog-image5.jpg" data-srcset="img/blog-image5-min.jpg 480w,img/blog-image5.jpg" data-sizes="100vw" alt="Blog Image">
+              </a>
+            </div>
+            <div class="blog-post-title">
+              <h3><a href="#">Vestibulum vel mauris nec ex tempus</a></h3>
+            </div>
+            <div class="blog-post-format">
+              <span><a href="#"><img src="img/author-image1.jpg" srcset="img/author-image1-min.jpg 480w,img/author-image1.jpg" sizes="100vw" class="img-responsive img-circle">
+                  Jen Lopez</a></span>
+              <span><i class="fa fa-date"></i> March 12, 2017</span>
+              <span><a href="#"><i class="fa fa-comment-o"></i> 256 Comments</a></span>
+            </div>
+            <div class="blog-post-des">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+              <a href="#" class="btn btn-default">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-md-offset-1 col-sm-6">
+          <h3>EPAM LAB</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <div class="footer-copyright">
+            <p>Copyright &copy; 2019 EPAM</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-1 col-sm-6">
+          <h3>Talk to us</h3>
+          <p><i class="fa fa-globe"></i> 512 Delicious Street, San Francisco, CA 10880</p>
+          <p><i class="fa fa-phone"></i> 010-020-0990</p>
+          <p><i class="fa fa-save"></i> info@company.com</p>
+        </div>
+
+        <div class="clearfix col-md-12 col-sm-12">
+          <hr>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+          <ul class="social-icon">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-dribbble"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back top -->
+  <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+</body>
+
+</html>
