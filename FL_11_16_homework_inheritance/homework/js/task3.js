@@ -1,5 +1,5 @@
 function Pokemon(){
-    this.hasWings = false;
+    this.isWings = false;
   }
   Pokemon.prototype.getType = function(){
     return this.type;
@@ -8,7 +8,7 @@ function Pokemon(){
     return this.specie;
   }
   Pokemon.prototype.canFly = function(){
-    return this.hasWings;
+    return this.isWings;
   }
   Pokemon.prototype.getPokemonType = function(){
     return this.constructor.name;
@@ -35,7 +35,7 @@ function Pokemon(){
   
   function Charizard (){
     Charmeleon.call(this);
-    this.hasWings = true;
+    this.isWings = true;
     this.evolve = () => this;
   }
   Charizard.prototype = Object.create(Charmeleon.prototype);
@@ -119,7 +119,7 @@ const charizard = new Charizard();
     Middle.call(this);
     this.type = 'Fullstack';
     this.specie = 'Google master';
-    this.hasWings = true;
+    this.isWings = true;
     this.evolve = () => this;
   }
   Senior.prototype = Object.create(Middle.prototype);
