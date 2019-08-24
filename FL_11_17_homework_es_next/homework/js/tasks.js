@@ -24,3 +24,19 @@ console.log(addUniqueId(myProfile));
 console.log(myProfile);
 
 //task 4
+let regroupObject = (object) => {
+    let{name, details} = object;
+    let{university, ...user} = {name, ...details};
+    let{age, firstName = name, id} = user;
+    user = {age, firstName, id};
+    
+    return {university, user};
+  }
+
+const oldObj = {name: 'Someone', details: {id: 1, age: 11, university: 'UNI'}}
+console.log(regroupObject(oldObj));
+
+//task 5
+let findUniqueElements = (arr) => [...new Set(arr)];
+
+console.log(findUniqueElements(array));
