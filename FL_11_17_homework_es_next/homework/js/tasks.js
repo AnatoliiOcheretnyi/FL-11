@@ -40,3 +40,5 @@ console.log(regroupObject(oldObj));
 let findUniqueElements = (arr) => [...new Set(arr)];
 
 console.log(findUniqueElements(array));
+
+//task 6
