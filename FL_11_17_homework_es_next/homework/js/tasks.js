@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 // task 1
 let maxElement = (arr) => Math.max(...arr);
 
@@ -48,3 +50,41 @@ const phoneNumber = '0123456789'
 console.log(hideNumber(phoneNumber));
 
 //task 7
+let add = (a = 0, b = 0) => {
+  if(!a || !b){
+    throw Error('Missing property')
+  }
+  return a + b
+}
+
+console.log(add(1,3));
+
+//task 8
+let usersRepoList = (link) => {
+  fetch(link)
+  .then(response => response.json())
+  .then(getData => {
+    let listOfRepository = 
+    (getData.map(repository => repository.name)).sort()
+    console.log(listOfRepository);
+  })
+  .catch(err => {
+    throw new Error('Something went wrong');
+  });
+}
+
+usersRepoList('https://api.github.com/users/AnatoliiOcheretnyi/repos');
+
+//task 9
+async function userRepoList(link){
+  try{
+    const response = await fetch(link)
+    const jsonData = await response.json()
+    let listOfRepository = 
+    (jsonData.map(repository => repository.name)).sort()
+    console.log(listOfRepository);
+  } catch (err) {
+    throw new Error('Something went wrong');
+  }
+}
+userRepoList('https://api.github.com/users/AnatoliiOcheretnyi/repos');
