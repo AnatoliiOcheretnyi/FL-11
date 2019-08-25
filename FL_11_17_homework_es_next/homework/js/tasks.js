@@ -42,3 +42,9 @@ let findUniqueElements = (arr) => [...new Set(arr)];
 console.log(findUniqueElements(array));
 
 //task 6
+let hideNumber = (phoneNumber) => (phoneNumber.slice(6)).padStart(10, '*')
+
+const phoneNumber = '0123456789'
+console.log(hideNumber(phoneNumber));
+
+//task 7
