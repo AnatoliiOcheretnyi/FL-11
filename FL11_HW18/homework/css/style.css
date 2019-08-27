@@ -1,0 +1,54 @@
+ul {
+    list-style: none;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .user {
+    display: flex;
+    margin: 10px;
+    width: 30%;
+  }
+  
+  .list-group form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .list-group input {
+    margin: 10px 0 0 ;
+  }
+  
+  .list-group-item:hover {
+    cursor: pointer;
+  }
+  
+  .post-header{
+    font-size: 28px;
+    color: #fff;
+  }
+  .cat {
+    width: 100%;
+  }
+  
+  .spinner {
+    width: 200px;
+    height: 64px;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+
+  .lists:hover{
+    cursor: pointer;
+  }
