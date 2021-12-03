@@ -1,1 +1,1 @@
-console.log('ya ebav 12 urok')
+console.log('ne, norm urok')
