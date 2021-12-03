@@ -1,0 +1,1 @@
+console.log('ya ebav 12 urok')
